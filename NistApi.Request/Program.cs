@@ -9,10 +9,10 @@ using System.Text.Json;
 var dataList = TakeList();
 
 var dataString = JsonSerializer.Serialize(dataList);
-
+var toWriteData = "[" + dataString + "]";
 Console.WriteLine("Dosya yazılavak!!!!!!!!!!");
 
-File.WriteAllText("./data.json", dataString);
+File.WriteAllText("./data.json", toWriteData);
 
 Console.WriteLine("Dosya yazıldı!!!!!!!!");
 
